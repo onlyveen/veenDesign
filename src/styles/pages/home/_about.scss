@@ -1,0 +1,117 @@
+#about {
+	line-height: 2;
+	@include flexcenter;
+	background: $dark_base_color;
+	color: #fff;
+	position: relative;
+	@include respondToBelow(sm) {
+		font-size: 16px;
+		padding: 50px 0 0;
+		line-height: 1.7;
+		min-height: 0;
+	}
+	> * {
+		position: relative;
+		z-index: 1;
+	}
+	.container {
+		@include respondToAbove(md) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		> div {
+			@include respondToBelow(sm) {
+				padding: 30px;
+			}
+			@include respondToAbove(md) {
+				width: calc(45% - 50px);
+			}
+			&.left {
+				padding: 100px 0;
+				p {
+					font-size: 16px;
+				}
+			}
+			&.right {
+				@include respondToAbove(md) {
+					width: calc(55% - 50px);
+				}
+				@include respondToBelow(sm) {
+					padding-bottom: 0;
+				}
+			}
+			h1 {
+				font-size: 3vw;
+				@include respondToBelow(sm) {
+					font-size: 10vw;
+				}
+			}
+		}
+		.ico_list {
+			display: flex;
+			justify-content: space-between;
+			color: #fff;
+			flex-wrap: wrap;
+			background: $black_bg;
+			padding-left: 25px;
+			@include respondToBelow(sm) {
+				padding: 30px;
+				margin: 0 -30px;
+			}
+			> p {
+				width: 50%;
+				padding: 25px;
+				display: flex;
+				align-items: center;
+				@include respondToBelow(sm) {
+					width: 100%;
+				}
+				img {
+					max-height: 35px;
+					max-width: 50px;
+					margin-right: 30px;
+					@include respondToBelow(sm) {
+						width: 75px;
+					}
+				}
+				span {
+					text-align: center;
+					line-height: 1.5;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: url(../images/aboutCover.jpg) top right no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		opacity: 0.25;
+		z-index: 0;
+
+		@include respondToBelow(sm) {
+			background-position: top right 10%;
+		}
+	}
+	&:after {
+		@include respondToAbove(md) {
+			content: "";
+		}
+		position: absolute;
+		left: 0;
+		right: 50%;
+		top: 0;
+		bottom: 0;
+		background: $black_bg;
+		background-size: cover;
+		z-index: 0;
+	}
+}
