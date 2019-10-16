@@ -1,0 +1,251 @@
+$mw_grid: 70%;
+#myWork {
+	min-height: 100vh;
+	padding: 100px 0;
+	line-height: 2;
+	font-size: 20px;
+	@include flexcenter;
+	flex-direction: column;
+	position: relative;
+	.main-heading-ttl {
+		padding: 0 50px;
+		width: 100%;
+	}
+	#gallery {
+		margin-top: 50px;
+		.logoList {
+			display: flex;
+			flex-wrap: wrap;
+			background: #fff;
+
+			.logoItem {
+				width: 25%;
+				position: relative;
+				padding: 5px;
+				.thumb {
+					overflow: hidden;
+					padding: 10px;
+					display: block;
+					border: solid 1px #ddd;
+					img {
+						transition: all 0.25s linear;
+						transform: scale(0.95);
+						filter: grayscale(1);
+						opacity: 0.9;
+					}
+				}
+				> * {
+					z-index: 2;
+					position: relative;
+				}
+
+				&:hover,
+				&.selected {
+					padding: 5px;
+					img {
+						opacity: 1;
+						transform: scale(1);
+						filter: grayscale(0);
+					}
+				}
+				&.selected {
+					img {
+						box-shadow: 0 0 0 5px $dark_base_color;
+					}
+				}
+			}
+		}
+		&.close {
+			display: flex;
+			@include respondToBelow(sm) {
+				display: block;
+			}
+			h1 {
+				width: 100% - $mw_grid;
+				z-index: 3;
+				margin: 0;
+				background: $dark_base_color;
+				display: flex;
+				padding-top: 100px;
+				font-size: 3vw;
+				justify-content: center;
+				position: sticky;
+				height: 100vh;
+				top: 0;
+				color: #fff;
+				@include respondToBelow(sm) {
+					height: auto;
+					padding: 15px;
+					width: 100%;
+					font-size: 7vw;
+				}
+			}
+			.logoList {
+				width: $mw_grid;
+				padding-left: 50px;
+				padding-right: 50px;
+				@include respondToBelow(sm) {
+					width: 100%;
+					padding: 15px 15px 50px;
+				}
+			}
+		}
+		&.open {
+			margin: 0;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: $black_bg;
+			padding: 30px;
+			display: flex;
+			z-index: 99999;
+			align-items: center;
+			flex-direction: row-reverse;
+			.logoList {
+				width: 45%;
+				padding-left: 15px;
+				background: transparent;
+				justify-content: flex-end;
+				.logoItem {
+					padding: 0;
+					width: 16.6666%;
+					.thumb {
+						border: 0;
+					}
+				}
+			}
+			.next {
+				width: 55%;
+			}
+			@include respondToBelow(sm) {
+				flex-direction: column-reverse;
+				padding: 0;
+				.med-heading-ttl {
+					display: none;
+				}
+				> div {
+					width: 100% !important;
+				}
+				.logoList {
+					flex-wrap: nowrap;
+					overflow: auto;
+					max-width: 100%;
+					justify-content: flex-start;
+					> div {
+						min-width: 33.333%;
+					}
+				}
+			}
+		}
+	}
+	.webby {
+		width: 100%;
+		display: flex;
+		@include respondToBelow(sm) {
+			display: block;
+		}
+
+		h1 {
+			width: 100% - $mw_grid;
+			margin: 0;
+			background: $black_bg;
+			display: flex;
+			padding-top: 100px;
+			font-size: 3vw;
+			justify-content: center;
+			position: sticky;
+			height: 100vh;
+			top: 0;
+			color: #fff;
+			@include respondToBelow(sm) {
+				height: auto;
+				padding: 15px;
+				z-index: 3;
+				width: 100%;
+				font-size: 7vw;
+			}
+		}
+		.website_list {
+			padding: 100px 50px;
+			width: $mw_grid;
+			@include respondToBelow(sm) {
+				width: 100%;
+				padding: 25px;
+			}
+			.website_item {
+				background: #fff;
+				@include shadow;
+				margin-bottom: 30px;
+				@include respondToBelow(sm) {
+					margin-bottom: 50px;
+				}
+				.web_in_wrap {
+					position: relative;
+					border: solid 1px $border_color;
+					display: flex;
+					align-items: center;
+					@include respondToBelow(sm) {
+						flex-wrap: wrap;
+					}
+					> div {
+						flex: 1 0 0;
+						@include respondToBelow(sm) {
+							flex: unset;
+						}
+					}
+					.desc {
+						padding: 30px 15px;
+						font-size: 14px;
+						@include respondToBelow(sm) {
+							width: 100%;
+							font-size: 12px;
+						}
+						.site_ttl {
+							font-weight: 700;
+							margin: 0 0 15px;
+							font-size: 16px;
+							padding-right: 35%;
+							line-height: 1.25;
+						}
+					}
+					.screens {
+						padding: 15px;
+						@include respondToBelow(sm) {
+							img {
+								max-width: 75%;
+								display: block;
+								margin: auto;
+							}
+						}
+					}
+					@include respondToBelow(sm) {
+						.logo {
+							width: 35%;
+							top: -15px;
+							right: -15px;
+							position: absolute;
+							@include shadow;
+						}
+					}
+				}
+			}
+		}
+	}
+	> * {
+		position: relative;
+		z-index: 1;
+	}
+	&:after {
+		// content: "";
+		position: absolute;
+		right: $mw_grid;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background: $dark_base_color;
+		background-size: cover;
+		z-index: 0;
+	}
+}
