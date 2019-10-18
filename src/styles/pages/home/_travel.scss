@@ -1,24 +1,41 @@
-#Travel{
-    .container{
-        display: flex;
-        h1{
-            font-size: 3vw;
-            margin-bottom: 25px;
-        }
-        div{
-            &.travel_dec{
-                width: 40%;
-                padding: 100px 0;
-                padding-right: 100px;
-            }
-            &.travel_illust{
-                width: 60%;
-                img{
-                    max-width: 100%;
-                }
-
-            }
-
-        }
+#Travel {
+  .container {
+    display: flex;
+    @include respondToBelow(sm) {
+      flex-direction: column-reverse;
     }
+    h1 {
+      font-size: 3vw;
+      margin-bottom: 25px;
+    }
+    div {
+      &.travel_dec {
+        width: 40%;
+        padding: 100px 0;
+        padding-right: 100px;
+
+        @include respondToBelow(sm) {
+          width: 100%;
+          padding: 0 15px 50px;
+          h1 {
+            font-size: 8vw;
+          }
+        }
+      }
+      &.travel_illust {
+        width: 60%;
+        img {
+          max-width: 100%;
+        }
+        @include respondToBelow(sm) {
+          width: 100%;
+          img {
+            max-width: 80%;
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
 }
