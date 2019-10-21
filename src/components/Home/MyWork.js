@@ -93,6 +93,7 @@ const MyWork = () => {
         <div className="logoList">
           {Object.keys(thumbLogos).map((thumb, i) => (
             <div
+              key={thumbLogos[thumb]}
               onClick={() => clickHandler(thumb)}
               className={`logoItem ${
                 thumb === selectedThumb ? "selected" : "notSelected"
