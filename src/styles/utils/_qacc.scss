@@ -1,18 +1,18 @@
-body{
+body {
   color: $text_primary_color;
   small {
     font-size: 80%;
   }
   background: #fff url(../images/bg.svg) center top repeat-y;
   background-size: 100%;
-   cursor: url(../images/dotCursor.svg), auto;
+  cursor: url(../images/dotCursor.svg), auto;
 }
 
-a:not(.noBgHover){
-  transition: all .25s;
+a:not(.noBgHover) {
+  transition: all 0.25s;
   position: relative;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -22,10 +22,10 @@ a:not(.noBgHover){
     transform-origin: center right;
     background: #000;
     z-index: -1;
-    transition: transform .25s linear;
+    transition: transform 0.25s linear;
   }
   &:hover {
-    &:before{
+    &:before {
       transform-origin: center left;
       transform: scaleX(1);
     }
@@ -649,8 +649,14 @@ body {
     }
   }
 }
-::-moz-selection { background: #000000; color: #fff; }
-::selection { background: #000000; color: #fff; }
+::-moz-selection {
+  background: #000000;
+  color: #fff;
+}
+::selection {
+  background: #000000;
+  color: #fff;
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus textarea:-webkit-autofill,
@@ -754,8 +760,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-
-.mouse_cur{
+.mouse_cur {
   position: fixed;
   top: -14.5px;
   left: -14.5px;
@@ -764,10 +769,10 @@ select:-webkit-autofill:focus {
   transform-origin: center;
   border-radius: 50%;
   border: solid 1px $dark_base_color;
-  transition: transform .02s;
+  transition: transform 0.02s;
   z-index: 999999;
   pointer-events: none;
-  @include respondToBelow(sm){
+  @include respondToBelow(sm) {
     display: none;
   }
 }
