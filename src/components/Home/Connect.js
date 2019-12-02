@@ -28,13 +28,13 @@ const Connect = () => {
           </a>
         </li>
         <li className="FaCodepen">
-          <a href="//codepen.com/onlyveen" target="_blank" data-name="Codepen">
+          <a href="//codepen.io/onlyveen" target="_blank" data-name="Codepen">
             <FaCodepen />
           </a>
         </li>
         <li className="FaLinkedin">
           <a
-            href="//linkedin.com/onlyveen"
+            href="//linkedin.com/in/onlyveen/"
             target="_blank"
             data-name="Linkedin"
           >
