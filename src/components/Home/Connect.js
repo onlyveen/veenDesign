@@ -14,35 +14,43 @@ const Connect = () => {
       <h1 class="main-heading-ttl lined">Connect</h1>
       <ul className="soci">
         <li className="FaTwitter">
-          <a href="" data-name="Twitter">
+          <a href="//twitter.com/onlyveen" target="_blank" data-name="Twitter">
             <FaTwitter />
           </a>
         </li>
         <li className="FaInstagram">
-          <a href="" data-name="Instagram">
+          <a
+            href="//instagram.com/onlyveen"
+            target="_blank"
+            data-name="Instagram"
+          >
             <FaInstagram />
           </a>
         </li>
         <li className="FaCodepen">
-          <a href="" data-name="Codepen">
+          <a href="//codepen.com/onlyveen" target="_blank" data-name="Codepen">
             <FaCodepen />
           </a>
         </li>
         <li className="FaLinkedin">
-          <a href="" data-name="Linkedin">
+          <a
+            href="//linkedin.com/onlyveen"
+            target="_blank"
+            data-name="Linkedin"
+          >
             <FaLinkedin />
           </a>
         </li>
         <li className="FaGithub">
-          <a href="" data-name="Github">
+          <a href="//github.com/onlyveen" target="_blank" data-name="Github">
             <FaGithub />
           </a>
         </li>
-        <li className="FaDribbble">
-          <a href="" data-name="Dribbble">
+        {/* <li className="FaDribbble">
+          <a href="//dribble.com/onlyveen" data-name="Dribbble">
             <FaDribbble />
           </a>
-        </li>
+        </li> */}
       </ul>
       <div className="container">
         <div className="logo">
