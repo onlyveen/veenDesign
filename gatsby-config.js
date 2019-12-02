@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `VEEN.DESIGN`,
+    description: `UI, UX designer & developer @antstack.io, focused on designing solutions with elegantly
+    simple interfaces, trendy, minimalistic and
+    impactful designs. I'm always eager to learn new things and
+    constantly pushes his boundaries to get better at the craft. My
+    envision is to bring the ideas into life in breathtaking Look and
+    Feel and produce a well casted piece of output.`,
+    author: `@onlyveen`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

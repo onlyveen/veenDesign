@@ -1,0 +1,38 @@
+[
+  {
+    "name": "WheelsBox",
+    "logoImg": "web_01_wheelsbox",
+    "screens": "wheelsbox",
+    "about": "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline."
+  },
+  {
+    "name": "autofix.in",
+    "logoImg": "web_02_autofix",
+    "screens": "autofix",
+    "about": "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline."
+  },
+  {
+    "name": "Lanyard",
+    "logoImg": "web_03_lanyard",
+    "screens": "lanyard",
+    "about": "An Open Source Agenda App that gives real-time activities held at conferences. Enabled GatsbyJs static site generator, the ready app continued functionality during network failures. AWS Amplify backend enabled feedback collection at talk level."
+  },
+  {
+    "name": "AWS Community Day Bengaluru",
+    "logoImg": "web_04_comunity-day-blr",
+    "screens": "awsugblrcd",
+    "about": "AWS User Group Bengaluru, Bengaluru based group united by community-led learnings & technologies closely knit with Amazon Web Services, cloud computing tech, AWS design implementation and servicing, high scalability/performance computing, production use cases of AWS, blockchain, Artificial Intelligence and much more."
+  },
+  {
+    "name": "anststack.io",
+    "logoImg": "web_05_antstack-ico",
+    "screens": "antstackio",
+    "about": "A fullstack serverless company aiming at providing holistic solutions to get you up and running with serverless!"
+  },
+  {
+    "name": "WONE Creations",
+    "logoImg": "web_06_wone-creations",
+    "screens": "wone",
+    "about": "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline."
+  }
+]

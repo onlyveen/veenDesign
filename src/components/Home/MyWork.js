@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Pexel from "../Pexel"
+import websDesc from "../../data/webs.json"
 
 const MyWork = () => {
   const [imgModal, setImgModal] = useState(false)
@@ -12,51 +13,6 @@ const MyWork = () => {
   const mediumLogos = importAll(
     require.context("../../images/logos/medium", false, /\.(png|jpe?g|svg)$/)
   )
-
-  const websDesc = [
-    {
-      name: "WheelsBox",
-      logoImg: "web_01_wheelsbox",
-      screens: "wheelsbox",
-      about:
-        "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline.",
-    },
-    {
-      name: "autofix.in",
-      logoImg: "web_02_autofix",
-      screens: "autofix",
-      about:
-        "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline.",
-    },
-    {
-      name: "Lanyard",
-      logoImg: "web_03_lanyard",
-      screens: "lanyard",
-      about:
-        "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline.",
-    },
-    {
-      name: "AWS Community Day Bengaluru",
-      logoImg: "web_04_comunity-day-blr",
-      screens: "awsugblrcd",
-      about:
-        "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline.",
-    },
-    {
-      name: "anststack.io",
-      logoImg: "web_05_antstack-ico",
-      screens: "antstackio",
-      about:
-        "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline.",
-    },
-    {
-      name: "WONE Creations",
-      logoImg: "web_06_wone-creations",
-      screens: "wone",
-      about:
-        "Buying a new automobile? Selling an old one? Need to book a test drive or service? We got you covered for all your Automobile needs! WheelsBox is application to solve gaps in car buying experience online and offline.",
-    },
-  ]
 
   function clickHandler(imgSrc) {
     const newThumbImageSrc = imgSrc.replace(imgSrc.slice(0, 9), "")

@@ -14,7 +14,7 @@ const Travel = () => {
             things related to these and found way to the world of web
             technologies through <strong>Infibeam Avenues</strong>, A check
             point helped me grow to reach my next level as UI, UX designer and
-            developer at <strong>Hantstack.io</strong>, a fullstack serverless
+            developer at <strong>antstack.io</strong>, a fullstack serverless
             company aiming at providing holistic solutions to get you up and
             running with serverless!
           </p>
