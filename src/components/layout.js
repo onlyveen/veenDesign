@@ -1,7 +1,13 @@
-import React, {Fragment} from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import {IoMdHome,IoMdInformationCircleOutline,IoIosSettings,IoMdImage,IoMdMail} from "react-icons/io"
+import {
+  IoMdHome,
+  IoMdInformationCircleOutline,
+  IoIosSettings,
+  IoMdImage,
+  IoMdMail,
+} from "react-icons/io"
 
 import NavCircle from "./NavCircle"
 import "../styles/main.scss"
@@ -21,14 +27,24 @@ const Layout = ({ children }) => {
   return (
     <Fragment>
       <NavCircle>
-          <Link className="noBgHover" to="/#home"><IoMdHome/></Link>
-          <Link className="noBgHover" to="/#about"><IoMdInformationCircleOutline/></Link>
-          <Link className="noBgHover" to="/#services"><IoIosSettings/></Link>
-          <Link className="noBgHover" to="/portfolio"><IoMdImage/></Link>
-          <Link className="noBgHover" to="/#connect"><IoMdMail/></Link>
+        <Link className="noBgHover" to="/#home">
+          <IoMdHome />
+        </Link>
+        <Link className="noBgHover" to="/#about">
+          <IoMdInformationCircleOutline />
+        </Link>
+        <Link className="noBgHover" to="/#services">
+          <IoIosSettings />
+        </Link>
+        <Link className="noBgHover" to="/portfolio">
+          <IoMdImage />
+        </Link>
+        <Link className="noBgHover" to="/#connect">
+          <IoMdMail />
+        </Link>
       </NavCircle>
       <div id="page">
-        <main>{children}</main>    
+        <main>{children}</main>
       </div>
     </Fragment>
   )

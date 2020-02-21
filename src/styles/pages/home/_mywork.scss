@@ -1,7 +1,7 @@
 $mw_grid: 70%;
 #myWork {
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 100px 0 0;
   line-height: 2;
   font-size: 20px;
   @include flexcenter;
@@ -103,6 +103,9 @@ $mw_grid: 70%;
       z-index: 99999;
       align-items: center;
       flex-direction: row-reverse;
+      .med-heading-ttl {
+        display: none;
+      }
       .logoList {
         width: 45%;
         padding-left: 15px;
