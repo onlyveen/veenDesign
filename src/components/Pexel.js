@@ -27,7 +27,6 @@ const Pexel = () => {
     setShowFullImage(id)
     setZoom(false)
   }
-  console.log(zoom)
 
   return (
     <div className={`pexelModal ${showFullImage ? "open" : "closed"}`}>
