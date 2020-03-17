@@ -11,7 +11,8 @@ $mw_grid: 70%;
     padding: 0 50px;
     width: 100%;
   }
-  #gallery {
+  #gallery,
+  .picGallery {
     margin-top: 50px;
     .logoList {
       display: flex;
@@ -75,7 +76,7 @@ $mw_grid: 70%;
         color: #fff;
         @include respondToBelow(sm) {
           height: auto;
-          padding: 15px;
+          padding: 20px 15px;
           width: 100%;
           font-size: 7vw;
         }
@@ -143,7 +144,9 @@ $mw_grid: 70%;
       }
     }
   }
-  .webby {
+
+  .webby,
+  .pexel {
     width: 100%;
     display: flex;
     @include respondToBelow(sm) {
@@ -164,7 +167,7 @@ $mw_grid: 70%;
       color: #fff;
       @include respondToBelow(sm) {
         height: auto;
-        padding: 15px;
+        padding: 20px 15px;
         z-index: 3;
         width: 100%;
         font-size: 7vw;
@@ -233,6 +236,145 @@ $mw_grid: 70%;
               right: -15px;
               position: absolute;
               @include shadow;
+            }
+          }
+        }
+      }
+    }
+  }
+  .pexel {
+    position: relative;
+    z-index: 999;
+    h1 {
+      background: transparent;
+      color: $black_bg;
+      @include respondToBelow(sm) {
+        background: #fff;
+      }
+    }
+    .pexelModal {
+      width: 70%;
+      @include respondToBelow(sm) {
+        width: 100%;
+      }
+      #Pexel {
+        display: flex;
+        display: list-item;
+        column-count: 4;
+        list-style-type: none;
+        column-gap: 0;
+        padding: 5px;
+        @include respondToBelow(sm) {
+          column-count: 3;
+        }
+        .pic {
+          width: 100%;
+          padding: 5px;
+          .thumb {
+            position: relative;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+            span {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: $dark_base_color;
+              color: #fff;
+              padding: 5px 10px;
+              text-align: center;
+              font-size: 14px;
+              transition: all 0.25s ease;
+              transform: translateY(100%);
+            }
+          }
+          &:hover {
+            .thumb {
+              span {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      }
+      &.open {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: $black_bg;
+        padding: 30px;
+        display: flex;
+        z-index: 99999;
+        flex-direction: column-reverse;
+        width: 100%;
+        .med-heading-ttl {
+          display: none;
+        }
+        #Pexel {
+          display: flex;
+          width: 100%;
+          padding-left: 15px;
+          background: transparent;
+          height: 20%;
+          overflow: auto;
+          .pic {
+            padding: 0;
+            .thumb {
+              cursor: pointer;
+              .full {
+                display: none;
+              }
+              img {
+                height: 100px;
+                width: auto;
+                max-width: none;
+              }
+            }
+            &.active {
+              img {
+                padding: 10px;
+              }
+            }
+          }
+        }
+        .next {
+          width: 100%;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: auto;
+          img {
+            max-width: none;
+          }
+          &.zoomin {
+            img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+        }
+        @include respondToBelow(sm) {
+          flex-direction: column-reverse;
+          padding: 0;
+          .med-heading-ttl {
+            display: none;
+          }
+          > div {
+            width: 100% !important;
+          }
+          .logoList {
+            flex-wrap: nowrap;
+            overflow: auto;
+            max-width: 100%;
+            justify-content: flex-start;
+            > div {
+              min-width: 33.333%;
             }
           }
         }

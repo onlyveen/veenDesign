@@ -42,7 +42,6 @@ const MyWork = () => {
   }
   return (
     <div id="myWork">
-      {/* <Pexel /> */}
       <h1 className="main-heading-ttl lined">I've done</h1>
       <div id="gallery" className={imgModal ? "open" : "close"}>
         <h1 className="med-heading-ttl text-center">Branding</h1>
@@ -104,6 +103,10 @@ const MyWork = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="pexel">
+        <h1 className="med-heading-ttl text-center">#PraGoView</h1>
+        <Pexel />
       </div>
     </div>
   )

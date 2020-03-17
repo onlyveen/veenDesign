@@ -1,29 +1,69 @@
-import React, { useEffect, useState } from "react"
-import Unsplash, { toJson } from "unsplash-js"
+import React, { useEffect, useState, useRef } from "react"
+// import Unsplash, { toJson } from "unsplash-js"
+import axios from "axios"
 
 const Pexel = () => {
-  const [picturesData, setPicturesData] = useState(null)
+  const [picturesData, setPicturesData] = useState([])
+  const [showFullImage, setShowFullImage] = useState(null)
+  const [zoom, setZoom] = useState(false)
+  const parentRef = useRef(null)
 
   useEffect(() => {
-    const unsplash = new Unsplash({
-      accessKey:
-        "502d2f0179f9f68d463448c708de3e4fc5efd654c7fc1fb0e4ad4779ec5dcf39",
-    })
-
-    unsplash.users
-      .photos("onlyveen", 1, 20, "latest", false)
-      .then(toJson)
-      .then(json => {
-        console.log(json)
-        setPicturesData(json)
+    axios
+      .get("https://api.imgur.com/3/account/onlyveen/images?perPage=100", {
+        headers: {
+          Authorization: "Bearer 76785ebf62d48b279eeef4c7480438f54a019554",
+        },
+      })
+      .then(response => {
+        setPicturesData(response.data)
+      })
+      .catch(error => {
+        console.log(error)
       })
   }, [])
 
+  const handleClick = (ev, id) => {
+    setShowFullImage(id)
+  }
+
   return (
-    <div id="Pexel">
-      {picturesData &&
-        picturesData.length &&
-        picturesData.map(picData => <img src={picData.urls.thumb}></img>)}
+    <div className={`pexelModal ${showFullImage ? "open" : "closed"}`}>
+      <div id="Pexel" ref={parentRef}>
+        {/* {console.log(picturesData)} */}
+        {picturesData.data &&
+          picturesData.data.length &&
+          picturesData.data.map(picData => (
+            <div
+              className={`pic ${showFullImage === picData.id ? "active" : ""}`}
+              key={picData.id}
+              onClick={e => handleClick(e, picData.id)}
+            >
+              <div className="thumb">
+                <img src={`//i.imgur.com/${picData.id}l.jpg`} />
+                <span className="full view">View</span>
+              </div>
+            </div>
+          ))}
+      </div>
+      {showFullImage ? (
+        <div className={`next ${zoom ? "zoomin" : "zoomout"}`}>
+          <span
+            className="close-x"
+            onClick={() => {
+              setShowFullImage(null)
+              setZoom(false)
+            }}
+          >
+            close
+          </span>
+          <img
+            alt={showFullImage}
+            onClick={() => setZoom(!zoom)}
+            src={`//i.imgur.com/${showFullImage}.jpg`}
+          />
+        </div>
+      ) : null}
     </div>
   )
 }
