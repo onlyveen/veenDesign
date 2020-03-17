@@ -25,6 +25,7 @@ const Pexel = () => {
 
   const handleClick = (ev, id) => {
     setShowFullImage(id)
+    setZoom(false)
   }
 
   return (
