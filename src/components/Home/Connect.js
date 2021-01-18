@@ -7,7 +7,7 @@ import {
   FaDribbble,
   FaLinkedin,
 } from "react-icons/fa"
-import logo from "../../images/logo.svg"
+import logo from "../../images/drop.svg"
 const Connect = () => {
   return (
     <div id="connect">
