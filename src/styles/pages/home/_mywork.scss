@@ -1,7 +1,7 @@
 $mw_grid: 70%;
 #myWork {
   min-height: 100vh;
-  padding: 100px 0 0;
+  padding: 50px 0 0;
   line-height: 2;
   font-size: 20px;
   @include flexcenter;
@@ -254,7 +254,9 @@ $mw_grid: 70%;
     }
     .pexelModal {
       width: 70%;
+      padding-bottom: 150px;
       @include respondToBelow(sm) {
+        padding-bottom: 100px;
         width: 100%;
       }
       #Pexel {

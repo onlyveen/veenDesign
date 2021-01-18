@@ -41,7 +41,7 @@ const Pexel = () => {
               onClick={e => handleClick(e, picData.id)}
             >
               <div className="thumb">
-                <img src={`//i.imgur.com/${picData.id}l.jpg`} />
+                <img src={`//i.imgur.com/${picData.id}m.jpg`} />
                 <span className="full view">View</span>
               </div>
             </div>

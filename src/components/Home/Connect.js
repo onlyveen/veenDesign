@@ -56,7 +56,9 @@ const Connect = () => {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-        <div className="copy">2019 © veen.design | All Rights Reserved</div>
+        <div className="copy">
+          2021 © praveengorakala.com | All Rights Reserved
+        </div>
       </div>
     </div>
   )

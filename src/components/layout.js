@@ -2,12 +2,11 @@ import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import {
-  IoMdHome,
-  IoMdInformationCircleOutline,
-  IoIosSettings,
-  IoMdImage,
-  IoMdMail,
-} from "react-icons/io"
+  RiHome6Line,
+  RiInformationLine,
+  RiImage2Line,
+  RiChatSmileLine,
+} from "react-icons/ri"
 
 import NavCircle from "./NavCircle"
 import "../styles/main.scss"
@@ -28,19 +27,17 @@ const Layout = ({ children }) => {
     <Fragment>
       <NavCircle>
         <Link className="noBgHover" to="/#home">
-          <IoMdHome />
+          <RiHome6Line />
         </Link>
         <Link className="noBgHover" to="/#about">
-          <IoMdInformationCircleOutline />
+          <RiInformationLine />
         </Link>
-        <Link className="noBgHover" to="/#services">
-          <IoIosSettings />
-        </Link>
+
         <Link className="noBgHover" to="/portfolio">
-          <IoMdImage />
+          <RiImage2Line />
         </Link>
         <Link className="noBgHover" to="/#connect">
-          <IoMdMail />
+          <RiChatSmileLine />
         </Link>
       </NavCircle>
       <div id="page">

@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react"
 import "./NavCircle.scss"
+import { globalHistory } from "@reach/router"
 
-const NavCircle = ({ children }) => {
-  const [activeIndex, setActiveIndex] = useState(0)
+const NavCircle = ({ children, location }) => {
+  const [activeIndex, setActiveIndex] = useState(null)
   const [menuOpen, setMenuOpen] = useState(false)
   const [magnetClass, setMagnetClass] = useState(false)
   const [len] = useState(children.length)
@@ -17,6 +18,23 @@ const NavCircle = ({ children }) => {
       window.removeEventListener("mousemove", listener)
     }
   })
+  useEffect(() => {
+    const items = children
+    const fasak =
+      globalHistory &&
+      globalHistory.location.pathname + globalHistory.location.hash
+    console.log(fasak)
+    if (items && fasak) {
+      items.map((child, idx) => {
+        if (fasak === child.props.to) {
+          setActiveIndex(idx)
+        }
+        if (fasak === "/") {
+          setActiveIndex(0)
+        }
+      })
+    }
+  }, [])
 
   const listener = e => {
     if (window.innerWidth > 767) {
@@ -56,7 +74,7 @@ const NavCircle = ({ children }) => {
 
   return (
     <div id="hdr" className={menuOpen && "open"}>
-      <div
+      {/* <div
         onClick={() => setMenuOpen(!menuOpen)}
         className={`toggle-button  ${magnetClass && "magnet"}`}
         style={{ transform: "translate(" + trns_x + "px," + trns_y + "px)" }}
@@ -89,6 +107,26 @@ const NavCircle = ({ children }) => {
           className="pointer"
           style={{ transform: `rotate(${angle}deg) translateZ(0)` }}
         ></div>
+      </div> */}
+      <div className="floatMenu">
+        <ul className={`list active-${activeIndex + 1}`}>
+          {len ? (
+            <Fragment>
+              {children.map((child, idx) => (
+                <li
+                  onClick={() => setActiveIndex(idx)}
+                  key={idx}
+                  // onMouseOver={() => hoverFunc(idx)}
+                  className={
+                    activeIndex === idx ? "list_item active" : "list_item "
+                  }
+                >
+                  {child}
+                </li>
+              ))}
+            </Fragment>
+          ) : null}
+        </ul>
       </div>
     </div>
   )
