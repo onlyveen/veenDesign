@@ -6,7 +6,7 @@ const Travel = () => {
     <div id="Travel">
       <div className="container">
         <div className="travel_dec">
-          <h1 class="main-heading-ttl lined">My Journey</h1>
+          <h1 className="main-heading-ttl lined">My Journey</h1>
           <p>
             This is all started at <strong>HomeShop 18</strong>. Working in an
             e-commerce platform as a catalouge designer, my interest deviated

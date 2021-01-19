@@ -11,7 +11,7 @@ import logo from "../../images/drop.svg"
 const Connect = () => {
   return (
     <div id="connect">
-      <h1 class="main-heading-ttl lined">Connect</h1>
+      <h1 className="main-heading-ttl lined">Connect</h1>
       <ul className="soci">
         <li className="FaTwitter">
           <a href="//twitter.com/onlyveen" target="_blank" data-name="Twitter">

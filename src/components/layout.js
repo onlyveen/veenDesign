@@ -22,11 +22,15 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
 
   return (
     <Fragment>
       <NavCircle>
-        <Link className="noBgHover" to="/#home">
+        <Link className="noBgHover" to="/#header">
           <RiHome6Line />
         </Link>
         <Link className="noBgHover" to="/#about">

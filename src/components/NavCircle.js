@@ -20,10 +20,10 @@ const NavCircle = ({ children, location }) => {
   })
   useEffect(() => {
     const items = children
-    const fasak =
-      globalHistory &&
-      globalHistory.location.pathname + globalHistory.location.hash
-    console.log(fasak)
+    const path = globalHistory && globalHistory.location.pathname
+    const hash = globalHistory && globalHistory.location.hash
+    const fasak = path + hash
+    console.log(hash)
     if (items && fasak) {
       items.map((child, idx) => {
         if (fasak === child.props.to) {
