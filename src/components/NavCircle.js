@@ -23,7 +23,6 @@ const NavCircle = ({ children, location }) => {
     const path = globalHistory && globalHistory.location.pathname
     const hash = globalHistory && globalHistory.location.hash
     const fasak = path + hash
-    console.log(hash)
     if (items && fasak) {
       items.map((child, idx) => {
         if (fasak === child.props.to) {

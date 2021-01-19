@@ -22,6 +22,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  console.log(data)
   if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
     require("smooth-scroll")('a[href*="#"]')
@@ -37,11 +39,11 @@ const Layout = ({ children }) => {
           <RiInformationLine />
         </Link>
 
-        <Link className="noBgHover" to="/portfolio">
-          <RiImage2Line />
-        </Link>
         <Link className="noBgHover" to="/#connect">
           <RiChatSmileLine />
+        </Link>
+        <Link className="noBgHover" to="/portfolio">
+          <RiImage2Line />
         </Link>
       </NavCircle>
       <div id="page">

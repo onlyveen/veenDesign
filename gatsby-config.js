@@ -8,6 +8,9 @@ module.exports = {
     envision is to bring the ideas into life in breathtaking Look and
     Feel and produce a well casted piece of output.`,
     author: `@onlyveen`,
+    titleTemplate: "%s · UI, UX designer & developer",
+    url: "https://www.praveengorakala.com", // No trailing slash allowed!
+    image: "./src/images/header_im.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
