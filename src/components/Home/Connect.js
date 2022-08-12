@@ -20,7 +20,7 @@ const Connect = () => {
         </li>
         <li className="FaInstagram">
           <a
-            href="//instagram.com/onlyveen"
+            href="//instagram.com/onlyveen_"
             target="_blank"
             data-name="Instagram"
           >
