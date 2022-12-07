@@ -11,7 +11,7 @@ const Header = () => {
           <TypeAnim
             heading={""}
             dataText={[
-              "UI & UX Researcher",
+              "UI & UX",
               "Visual Design Enthusiast",
               "Web Developer",
               "Photoholic",
