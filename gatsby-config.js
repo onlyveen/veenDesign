@@ -14,15 +14,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-
-    {
-      resolve: `gatsby-source-unsplash`,
-      options: {
-        appId: `97186`,
-        collections: [`8800720`],
-        perPage: `100`,
-      },
-    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,

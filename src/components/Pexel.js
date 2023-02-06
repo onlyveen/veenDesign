@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react"
-// import Unsplash, { toJson } from "unsplash-js"
 import axios from "axios"
 
 const Pexel = () => {
